@@ -1,5 +1,9 @@
 ﻿aiogram==3.21.0
 SQLAlchemy==2.0.35
 aiosqlite==0.20.0
+<<<<<<< HEAD
 python-dotenv==1.0.1
 psycopg2-binary==2.9.9
+=======
+python-dotenv==1.0.1
+>>>>>>> d26e15bb748e2dacfacaec01384eaf20197cfb35

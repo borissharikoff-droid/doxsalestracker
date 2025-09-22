@@ -30,4 +30,8 @@ async def start_deeplink(message: Message, command: CommandObject, session: Asyn
         session.add(ChannelMember(channel_id=inv.channel_id, user_id=user.id, role="sales"))
     inv.status = "used"
     await session.commit()
+<<<<<<< HEAD
     await message.answer("Вы присоединились как сейлз. Админ может назначить вам комиссию.")
+=======
+    await message.answer("Вы присоединились как сейлз. Админ может назначить вам комиссию.")
+>>>>>>> d26e15bb748e2dacfacaec01384eaf20197cfb35

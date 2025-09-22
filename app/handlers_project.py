@@ -53,4 +53,8 @@ async def invite_sales(message: Message, bot: Bot, session: AsyncSession):
     session.add(inv)
     await session.commit()
     link = await create_start_link(bot, f"inv_{token}", encode=True)
+<<<<<<< HEAD
     await message.reply(f"Инвайт для сейлзов: {link}")
+=======
+    await message.reply(f"Инвайт для сейлзов: {link}")
+>>>>>>> d26e15bb748e2dacfacaec01384eaf20197cfb35

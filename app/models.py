@@ -10,7 +10,11 @@ class User(Base):
     username: Mapped[str | None] = mapped_column(String(64))
     first_name: Mapped[str | None] = mapped_column(String(128))
     last_name: Mapped[str | None] = mapped_column(String(128))
+<<<<<<< HEAD
     created_at: Mapped[DateTime] = mapped_column(DateTime(timezone=True), server_default=func.now())
+=======
+    created_at = mapped_column(DateTime(timezone=True), server_default=func.now())
+>>>>>>> d26e15bb748e2dacfacaec01384eaf20197cfb35
 
 class Channel(Base):
     __tablename__ = "channels"
@@ -18,7 +22,11 @@ class Channel(Base):
     telegram_chat_id: Mapped[int] = mapped_column(BigInteger, unique=True, index=True)
     title: Mapped[str | None] = mapped_column(String(255))
     owner_user_id: Mapped[int | None] = mapped_column(ForeignKey("users.id"))
+<<<<<<< HEAD
     created_at: Mapped[DateTime] = mapped_column(DateTime(timezone=True), server_default=func.now())
+=======
+    created_at = mapped_column(DateTime(timezone=True), server_default=func.now())
+>>>>>>> d26e15bb748e2dacfacaec01384eaf20197cfb35
 
 class ChannelMember(Base):
     __tablename__ = "channel_members"
@@ -27,7 +35,11 @@ class ChannelMember(Base):
     user_id: Mapped[int] = mapped_column(ForeignKey("users.id"), index=True)
     role: Mapped[str] = mapped_column(String(16))  # admin|sales
     commission_percent: Mapped[int | None] = mapped_column(Integer)
+<<<<<<< HEAD
     created_at: Mapped[DateTime] = mapped_column(DateTime(timezone=True), server_default=func.now())
+=======
+    created_at = mapped_column(DateTime(timezone=True), server_default=func.now())
+>>>>>>> d26e15bb748e2dacfacaec01384eaf20197cfb35
 
 class Invite(Base):
     __tablename__ = "invites"
@@ -36,8 +48,13 @@ class Invite(Base):
     token: Mapped[str] = mapped_column(String(64), unique=True, index=True)
     status: Mapped[str] = mapped_column(String(16), index=True)  # active|used|revoked|expired
     created_by_user_id: Mapped[int] = mapped_column(ForeignKey("users.id"))
+<<<<<<< HEAD
     expires_at: Mapped[DateTime | None] = mapped_column(DateTime(timezone=True), nullable=True)
     created_at: Mapped[DateTime] = mapped_column(DateTime(timezone=True), server_default=func.now())
+=======
+    expires_at = mapped_column(DateTime(timezone=True), nullable=True)
+    created_at = mapped_column(DateTime(timezone=True), server_default=func.now())
+>>>>>>> d26e15bb748e2dacfacaec01384eaf20197cfb35
 
 class Sale(Base):
     __tablename__ = "sales"
@@ -47,4 +64,8 @@ class Sale(Base):
     amount: Mapped[Numeric] = mapped_column(Numeric(12,2))
     currency: Mapped[str] = mapped_column(String(8), default="RUB")
     comment: Mapped[str | None] = mapped_column(String(1024))
+<<<<<<< HEAD
     created_at: Mapped[DateTime] = mapped_column(DateTime(timezone=True), server_default=func.now())
+=======
+    created_at = mapped_column(DateTime(timezone=True), server_default=func.now())
+>>>>>>> d26e15bb748e2dacfacaec01384eaf20197cfb35

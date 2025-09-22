@@ -7,4 +7,8 @@ from app.routers.sales import router as sales_router
 router = Router()
 router.include_router(project_router)
 router.include_router(sales_join_router)
+<<<<<<< HEAD
 router.include_router(sales_router)
+=======
+router.include_router(sales_router)
+>>>>>>> d26e15bb748e2dacfacaec01384eaf20197cfb35

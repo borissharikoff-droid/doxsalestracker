@@ -40,4 +40,8 @@ async def add_sale(message: Message, bot: Bot, session: AsyncSession):
     session.add(sale)
     await session.commit()
     await message.reply("Продажа сохранена.")
+<<<<<<< HEAD
     await notify_owner(bot, ch, f"Новая продажа: {amount} от @{message.from_user.username or message.from_user.id}")
+=======
+    await notify_owner(bot, ch, f"Новая продажа: {amount} от @{message.from_user.username or message.from_user.id}")
+>>>>>>> d26e15bb748e2dacfacaec01384eaf20197cfb35
